@@ -1,11 +1,14 @@
 #include <iostream>
 
-#include "units.h"
+
 #include "field.h"
+#include "units.h"
 #include "mechniki.h"
 #include "kopeyshiki.h"
 #include "peshie.h"
 #include "horse.h"
+#include "gusary.h"
+#include "draguny.h"
 
 
 using namespace std;
@@ -21,12 +24,18 @@ int main() {
     kopeyshiki kopeyshiki;
     peshie peshie;
     horse horse;
-
+    gusary gusary;
+    draguny draguny;
 
 
     char ** arrgame = field.fillingField(field.createField());
 
     field.addUnitOnField(arrgame, mechniki.nameM);
+    field.addUnitOnField(arrgame, kopeyshiki.nameK);
+    field.addUnitOnField(arrgame,peshie.nameP);
+    field.addUnitOnField(arrgame, horse.nameH);
+    field.addUnitOnField(arrgame, gusary.nameG);
+    field.addUnitOnField(arrgame, draguny.nameD);
 
 
     field.printField(arrgame);

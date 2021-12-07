@@ -8,7 +8,7 @@
 #include <chrono>
 #include <cstdlib>
 
-#include "field.h"
+
 
 using namespace std;
 
@@ -75,8 +75,45 @@ public:
 
         }
 
-
     }
+
+    /*  char ** moveM (char ** arr, int step) {
+
+
+       char temp;
+       for (int i = 0; i < field.rows; i++) {
+           for (int j = 0; j < field.cols; j++) {
+
+               if (arr[i][j] == nameM) {
+                   switch (step):
+                   case 1: {
+                       temp = arr[i][j];
+                       arr[i][j] = arr[i][j-1];
+                       arr[i][j-1] = temp;
+                   }
+                   case 2: {
+                       temp = arr[i][j];
+                       arr[i][j] = arr[i][j+1];
+                       arr[i][j+1] = temp;
+                   }
+                   case 3: {
+                       temp = arr[i][j];
+                       arr[i][j] = arr[i+1][j];
+                       arr[i+1][j] = temp;
+                   }
+                   case 4: {
+                       temp = arr[i][j];
+                       arr[i][j] = arr[i-1][j];
+                       arr[i-1][j] = temp;
+                   }
+               }
+           }
+       }
+
+       return arr;
+   }*/
+
+
 
 
 };

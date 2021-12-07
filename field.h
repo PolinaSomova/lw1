@@ -15,6 +15,8 @@ using namespace std;
 #include "kopeyshiki.h"
 #include "peshie.h"
 #include "horse.h"
+#include "gusary.h"
+#include "draguny.h"
 
 
 
@@ -78,11 +80,14 @@ public:
 
     const int countMax = 10 + rand() % 5;
 
+
     units units;
     mechniki mechniki;
     kopeyshiki kopeyshiki;
     peshie peshie;
     horse horse;
+    gusary gusary;
+    draguny draguny;
 
 
 
@@ -119,6 +124,12 @@ public:
                         }
                         else if (unit == horse.nameH) {
                             horse.printConditionH();
+                        }
+                        else if (unit == gusary.nameG) {
+                            gusary.printConditionG();
+                        }
+                        else if (unit == draguny.nameD) {
+                            draguny.printConditionD();
                         }
                     }
                 }
