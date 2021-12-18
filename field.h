@@ -47,7 +47,7 @@ public:
             for (int j = 0; j < cols; j++) {
 
                 if ((i == 0) || (i == (rows - 1)) || (j == 0) || (j == (cols - 1))) {
-                    arr[i][j] = '*';
+                    arr[i][j] = 'X';
                 }
                 else {
                     arr[i][j] = ' ';

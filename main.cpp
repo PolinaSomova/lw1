@@ -12,6 +12,7 @@
 #include "base.h"
 #include "mountain.h"
 #include "lack.h"
+#include "green.h"
 
 
 using namespace std;
@@ -32,6 +33,7 @@ int main() {
     base base;
     mountain mountain;
     lack lack;
+    green green;
 
 
     char ** arrgame = field.fillingField(field.createField());
@@ -39,6 +41,7 @@ int main() {
     base.addBaseOnField(arrgame);
     mountain.addMountain(arrgame);
     lack.addLack(arrgame);
+    green.addGreen(arrgame);
     field.printField(arrgame);
 
     /*field.printField(arrgame);
