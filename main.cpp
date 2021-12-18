@@ -10,6 +10,7 @@
 #include "gusary.h"
 #include "draguny.h"
 #include "base.h"
+#include "mountain.h"
 
 
 using namespace std;
@@ -28,16 +29,22 @@ int main() {
     gusary gusary;
     draguny draguny;
     base base;
+    mountain mountain;
 
 
     char ** arrgame = field.fillingField(field.createField());
 
     base.addBaseOnField(arrgame);
-    base.createUnitsOnField(arrgame);
+    mountain.addMountain(arrgame);
     field.printField(arrgame);
 
-    cout << endl << endl;
+    /*field.printField(arrgame);
+    base.createUnitsOnField(arrgame);
+    field.printField(arrgame);*/
+
+    /*cout << endl << endl;
     base.delUnitsOnField(arrgame);
+    field.printField(arrgame);*/
 
 
 

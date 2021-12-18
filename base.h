@@ -160,43 +160,36 @@ public:
         switch (del) {
             case 0 : {
                 delBase (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
             case 1 : {
                 delBaseM (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
             case 2 : {
                 delBaseK (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
             case 3 : {
                 delBaseP (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
             case 4 : {
                 delBaseH (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
             case 5 : {
                 delBaseG (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
             case 6 : {
                 delBaseD (arrfield);
-                field.printField(arrfield);
                 field.printCount();
                 break;
             }
