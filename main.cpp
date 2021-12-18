@@ -13,6 +13,11 @@
 #include "mountain.h"
 #include "lack.h"
 #include "green.h"
+#include "neutral.h"
+#include "castle.h"
+#include "tower.h"
+#include "diamond.h"
+#include "bag.h"
 
 
 using namespace std;
@@ -34,14 +39,23 @@ int main() {
     mountain mountain;
     lack lack;
     green green;
+    neutral neutral;
+    castle castle;
+    tower tower;
+    diamond diamond;
+    bag bag;
 
 
     char ** arrgame = field.fillingField(field.createField());
 
     base.addBaseOnField(arrgame);
-    mountain.addMountain(arrgame);
+    neutral.printNeutralObj(arrgame);
+
+    /*mountain.addMountain(arrgame);
     lack.addLack(arrgame);
-    green.addGreen(arrgame);
+
+    green.addGreen(arrgame);*/
+
     field.printField(arrgame);
 
     /*field.printField(arrgame);

@@ -16,7 +16,7 @@ public:
 
     field field;
 
-    void addGreen (char **arr){
+    char ** addGreen (char **arr){
 
         for (int i = 0; i < field.rows; i++) {
             for (int j = 0; j < field.cols; j++) {
@@ -25,7 +25,7 @@ public:
                 }
             }
         }
-
+        return arr;
     };
 
 };

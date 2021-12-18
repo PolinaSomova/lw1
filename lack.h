@@ -17,7 +17,7 @@ public:
 
     field field;
 
-    void addLack(char **arr){
+    char ** addLack(char **arr){
 
         for (int i = 0; i < field.rows; i++) {
             for (int j = 0; j < field.cols; j++) {
@@ -26,7 +26,7 @@ public:
                 }
             }
         }
-
+        return arr;
     };
 
 };
