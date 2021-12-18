@@ -18,6 +18,7 @@
 #include "tower.h"
 #include "diamond.h"
 #include "bag.h"
+#include "landscape.h"
 
 
 using namespace std;
@@ -44,17 +45,15 @@ int main() {
     tower tower;
     diamond diamond;
     bag bag;
+    landscape landscape;
 
 
     char ** arrgame = field.fillingField(field.createField());
 
     base.addBaseOnField(arrgame);
     neutral.printNeutralObj(arrgame);
+    landscape.printLandscape(arrgame);
 
-    /*mountain.addMountain(arrgame);
-    lack.addLack(arrgame);
-
-    green.addGreen(arrgame);*/
 
     field.printField(arrgame);
 

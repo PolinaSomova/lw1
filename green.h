@@ -3,6 +3,7 @@
 #ifndef LW1_GREEN_H
 #define LW1_GREEN_H
 
+#include <conio.h>
 #include "field.h"
 
 using namespace std;
@@ -15,6 +16,8 @@ public:
     char nameGreen = '*';
 
     field field;
+
+
 
     char ** addGreen (char **arr){
 
