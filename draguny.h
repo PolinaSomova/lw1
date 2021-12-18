@@ -13,7 +13,7 @@ class draguny : public units {
 
 public:
 
-    char nameD = 'M';
+    char nameD = 'D';
 
     units units;
 

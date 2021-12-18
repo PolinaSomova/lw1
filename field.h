@@ -72,13 +72,13 @@ public:
 
 public:
 
+    int addi;
+    int addj;
 
-    int deli;
-    int delj;
 
     int countUnit = 0;
 
-    const int countMax = 10 + rand() % 5;
+    const int countMax = 10;
 
 
     units units;
@@ -98,10 +98,9 @@ public:
 
     char ** addUnitOnField(char ** arr, char unit) {
 
-        srand (time(NULL));
 
-        int addi = 1 + rand() % rows - 1;
-        int addj = 1 + rand() % cols - 1;
+        addi = 1 + rand() % rows - 1;
+        addj = 1 + rand() % cols - 1;
 
         if (countUnit < countMax) {
             for (int i = 0; i < rows; i++) {
@@ -109,8 +108,6 @@ public:
 
                     if ((i == addi) && (j == addj) && (arr[i][j] == ' ')) {
                         arr[i][j] = unit;
-                        deli = addi;
-                        delj = addj;
                         countUnit++;
 
                         if (unit == mechniki.nameM) {
@@ -148,7 +145,7 @@ public:
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
 
-                if ((i == deli) && (j == delj) && (arr[i][j] == unit)) {
+                if (arr[i][j] == unit) {
                     arr[i][j] = ' ';
                     countUnit--;
                 }
