@@ -5,6 +5,8 @@
 
 #include "field.h"
 
+using namespace std;
+
 
 class mountain {
 

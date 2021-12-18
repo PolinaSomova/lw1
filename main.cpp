@@ -11,6 +11,7 @@
 #include "draguny.h"
 #include "base.h"
 #include "mountain.h"
+#include "lack.h"
 
 
 using namespace std;
@@ -30,12 +31,14 @@ int main() {
     draguny draguny;
     base base;
     mountain mountain;
+    lack lack;
 
 
     char ** arrgame = field.fillingField(field.createField());
 
     base.addBaseOnField(arrgame);
     mountain.addMountain(arrgame);
+    lack.addLack(arrgame);
     field.printField(arrgame);
 
     /*field.printField(arrgame);
