@@ -17,6 +17,12 @@ using namespace std;
 #include "horse.h"
 #include "gusary.h"
 #include "draguny.h"
+#include "castle.h"
+#include "tower.h"
+#include "diamond.h"
+#include "bag.h"
+#include "green.h"
+#include "lack.h"
 
 
 
@@ -58,13 +64,54 @@ public:
         return arr;
     }
 
+    castle castle;
+    tower tower;
+    diamond diamond;
+    bag bag;
+
+    green green;
+    lack lack;
+
     void printField (char ** arr) {
 
         cout << endl;
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
-                cout << arr[i][j] << ' ';
+
+                if (arr[i][j] == 'X') {
+                    system("color F");
+                    cout << arr[i][j] << ' ';
+                }
+                else if (arr[i][j] == castle.nameC) {
+                    system("color 5");
+                    cout << arr[i][j] << ' ';
+                }
+                else if (arr[i][j] == tower.nameT) {
+                        system("color 6");
+                        cout << arr[i][j] << ' ';
+                    }
+                else if (arr[i][j] == diamond.nameDiam) {
+                    system("color 4");
+                    cout << arr[i][j] << ' ';
+                }
+                else if (arr[i][j] == bag.nameBag) {
+                    system("color 8");
+                    cout << arr[i][j] << ' ';
+                }
+                else if (arr[i][j] == green.nameGreen) {
+                    system("color 2");
+                    cout << arr[i][j] << ' ';
+                }
+                else if (arr[i][j] == lack.nameLack) {
+                    system("color 1");
+                    cout << arr[i][j] << ' ';
+                }
+                else {
+                    system("color 7");
+                    cout << arr[i][j] << ' ';
+                }
+
             }
             cout << endl;
         }

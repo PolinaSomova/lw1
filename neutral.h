@@ -45,6 +45,8 @@ public:
     bag bag;
 
     void printNeutralObj (char ** arrfield) {
+
+
         addNeutralObj(arrfield, castle.nameC);
         addNeutralObj(arrfield, tower.nameT);
         addNeutralObj(arrfield, diamond.nameDiam);

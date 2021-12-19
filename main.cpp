@@ -53,9 +53,15 @@ int main() {
     base.addBaseOnField(arrgame);
     neutral.printNeutralObj(arrgame);
     landscape.printLandscape(arrgame);
-
-
     field.printField(arrgame);
+
+
+
+
+
+
+
+
 
     /*field.printField(arrgame);
     base.createUnitsOnField(arrgame);
