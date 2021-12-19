@@ -23,7 +23,7 @@ public:
 
         for (int i = 0; i < field.rows; i++) {
             for (int j = 0; j < field.cols; j++) {
-                if ((i > 10) && (i < 15) && (j > 5) && (j < 12) && (arr[i][j] == ' ')) {
+                if ((i > 5) && (i < 15) && (j > 3) && (j < 12) && (arr[i][j] == ' ')) {
                     arr[i][j] = mountain.nameMount;
                 }
             }
@@ -61,8 +61,12 @@ public:
 
     void printLandscape (char ** arrfield) {
 
-        addMountain(arrfield);
         addLack(arrfield);
+        addMountain(arrfield);
+
+        addGreen(arrfield);
+        addGreen(arrfield);
+        addGreen(arrfield);
         addGreen(arrfield);
     }
 

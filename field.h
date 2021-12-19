@@ -7,6 +7,8 @@
 #include <fstream>
 #include <chrono>
 #include <cstdlib>
+#include "windows.h"
+#include "wincon.h"
 
 
 using namespace std;
@@ -82,40 +84,35 @@ public:
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
 
-                cout << arr[i][j] << ' ';
 
-                /*if (arr[i][j] == 'X') {
-                    system("color F");
-                    cout << arr[i][j] << ' ';
-                }
-                else if (arr[i][j] == castle.nameC) {
-                    system("color 5");
+                if (arr[i][j] == castle.nameC) {
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 5 );
                     cout << arr[i][j] << ' ';
                 }
                 else if (arr[i][j] == tower.nameT) {
-                        system("color 6");
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6 );
                         cout << arr[i][j] << ' ';
                     }
                 else if (arr[i][j] == diamond.nameDiam) {
-                    system("color 4");
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4 );
                     cout << arr[i][j] << ' ';
                 }
                 else if (arr[i][j] == bag.nameBag) {
-                    system("color 8");
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8 );
                     cout << arr[i][j] << ' ';
                 }
                 else if (arr[i][j] == green.nameGreen) {
-                    system("color 2");
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2 );
                     cout << arr[i][j] << ' ';
                 }
                 else if (arr[i][j] == lack.nameLack) {
-                    system("color 1");
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1 );
                     cout << arr[i][j] << ' ';
                 }
                 else {
-                    system("color 7");
+                    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7 );
                     cout << arr[i][j] << ' ';
-                }*/
+                }
 
             }
             cout << endl;

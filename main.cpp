@@ -29,14 +29,14 @@ int main() {
 
     base.addBaseOnField(arrgame);
     neutral.printNeutralObj(arrgame);
-    base.createUnitsOnField(arrgame);
+   // base.createUnitsOnField(arrgame);
     landscape.printLandscape(arrgame);
     field.printField(arrgame);
 
+   /* field.doMoveU(arrgame);
     field.doMoveU(arrgame);
     field.doMoveU(arrgame);
-    field.doMoveU(arrgame);
-    field.doMoveU(arrgame);
+    field.doMoveU(arrgame);*/
 
 
 
