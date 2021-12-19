@@ -2,22 +2,12 @@
 
 
 #include "field.h"
-#include "units.h"
-#include "mechniki.h"
-#include "kopeyshiki.h"
-#include "peshie.h"
-#include "horse.h"
-#include "gusary.h"
-#include "draguny.h"
+
 #include "base.h"
 #include "mountain.h"
-#include "lack.h"
-#include "green.h"
+
 #include "neutral.h"
-#include "castle.h"
-#include "tower.h"
-#include "diamond.h"
-#include "bag.h"
+
 #include "landscape.h"
 
 
@@ -29,31 +19,25 @@ int main() {
 
 
     field field;
-    units units;
-    mechniki mechniki;
-    kopeyshiki kopeyshiki;
-    peshie peshie;
-    horse horse;
-    gusary gusary;
-    draguny draguny;
     base base;
-    mountain mountain;
-    lack lack;
-    green green;
     neutral neutral;
-    castle castle;
-    tower tower;
-    diamond diamond;
-    bag bag;
     landscape landscape;
+
 
 
     char ** arrgame = field.fillingField(field.createField());
 
     base.addBaseOnField(arrgame);
     neutral.printNeutralObj(arrgame);
+    base.createUnitsOnField(arrgame);
     landscape.printLandscape(arrgame);
     field.printField(arrgame);
+
+    field.doMoveU(arrgame);
+    field.doMoveU(arrgame);
+    field.doMoveU(arrgame);
+    field.doMoveU(arrgame);
+
 
 
 

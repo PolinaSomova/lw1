@@ -109,8 +109,6 @@ public:
         createBaseG (arrfield);
         createBaseD (arrfield);
 
-        cout << endl;
-        field.printCount();
 
     }
 

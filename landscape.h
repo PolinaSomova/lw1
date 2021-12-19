@@ -23,7 +23,7 @@ public:
 
         for (int i = 0; i < field.rows; i++) {
             for (int j = 0; j < field.cols; j++) {
-                if ((i % 3 == 0) && (j % 5 == 0) && (arr[i][j] == ' ')) {
+                if ((i > 10) && (i < 15) && (j > 5) && (j < 12) && (arr[i][j] == ' ')) {
                     arr[i][j] = mountain.nameMount;
                 }
             }
@@ -31,11 +31,13 @@ public:
         return arr;
     };
 
+
+
     char ** addLack(char **arr){
 
         for (int i = 0; i < field.rows; i++) {
             for (int j = 0; j < field.cols; j++) {
-                if ((i % 2 == 0) && (j % 9 == 0) && (arr[i][j] == ' ')) {
+                if ((i > 3) && (i < (field.rows - 5)) && (j > 6) && (j < 10) && (arr[i][j] == ' ')) {
                     arr[i][j] = lack.nameLack;
                 }
             }

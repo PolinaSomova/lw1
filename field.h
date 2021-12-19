@@ -8,6 +8,7 @@
 #include <chrono>
 #include <cstdlib>
 
+
 using namespace std;
 
 #include "units.h"
@@ -23,6 +24,7 @@ using namespace std;
 #include "bag.h"
 #include "green.h"
 #include "lack.h"
+#include "mountain.h"
 
 
 
@@ -71,6 +73,7 @@ public:
 
     green green;
     lack lack;
+    mountain mountain;
 
     void printField (char ** arr) {
 
@@ -79,7 +82,9 @@ public:
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
 
-                if (arr[i][j] == 'X') {
+                cout << arr[i][j] << ' ';
+
+                /*if (arr[i][j] == 'X') {
                     system("color F");
                     cout << arr[i][j] << ' ';
                 }
@@ -110,7 +115,7 @@ public:
                 else {
                     system("color 7");
                     cout << arr[i][j] << ' ';
-                }
+                }*/
 
             }
             cout << endl;
@@ -223,6 +228,87 @@ public:
         delete [] arr;
     }
 
+
+    char ** moveU (char ** arr, char name, int step) {
+
+
+        char temp;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+
+                if (arr[i][j] == name) {
+                    switch (step) {
+                        case 1: {
+
+                            if (((arr[i][j-1] == mountain.nameMount) && (name != peshie.nameP)) || (arr[i][j-1] == green.nameGreen) || ((arr[i][j-1] == lack.nameLack) && (name == horse.nameH))) {
+                                temp = arr[i][j];
+                                arr[i][j] = arr[i][j-1];
+                                arr[i][j-1] = temp;
+                            }
+                            else {
+                                cout << "No way\n";
+                            }
+                            break;
+                        }
+                        case 2: {
+
+                            if (((arr[i][j+1] == mountain.nameMount) && (name != peshie.nameP)) || (arr[i][j+1] == green.nameGreen) || ((arr[i][j+1] == lack.nameLack) && (name == horse.nameH))) {
+                                temp = arr[i][j];
+                                arr[i][j] = arr[i][j+1];
+                                arr[i][j+1] = temp;
+                            }
+                            else {
+                                cout << "No way\n";
+                            }
+                            break;
+                        }
+                        case 3: {
+
+                            if (((arr[i+1][j] == mountain.nameMount) && (name != peshie.nameP)) || (arr[i+1][j] == green.nameGreen) || ((arr[i+1][j] == lack.nameLack) && (name == horse.nameH))) {
+                                temp = arr[i][j];
+                                arr[i][j] = arr[i+1][j];
+                                arr[i+1][j] = temp;
+                            }
+                            else {
+                                cout << "No way\n";
+                            }
+                            break;
+                        }
+                        case 4: {
+
+                            if (((arr[i-1][j] == mountain.nameMount) && (name != peshie.nameP)) || (arr[i-1][j] == green.nameGreen) || ((arr[i-1][j] == lack.nameLack) && (name == horse.nameH))) {
+                                temp = arr[i][j];
+                                arr[i][j] = arr[i-1][j];
+                                arr[i-1][j] = temp;
+                            }
+                            else {
+                                cout << "No way\n";
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return arr;
+    }
+
+    void doMoveU (char ** arr) {
+
+        int step;
+        char name;
+
+        cout << "Who is going?";
+        cin >> name;
+
+        cout << "Which step?\n";
+        cout << "1-left, 2-right, 3-down, 4-up";
+        cin >> step;
+
+        moveU(arr, name, step);
+        printField(arr);
+
+    }
 
 
 };
