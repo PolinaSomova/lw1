@@ -4,9 +4,9 @@
 #include "field.h"
 
 #include "base.h"
-#include "mountain.h"
 
 #include "neutral.h"
+
 
 #include "landscape.h"
 
@@ -25,18 +25,20 @@ int main() {
 
 
 
+
     char ** arrgame = field.fillingField(field.createField());
 
     base.addBaseOnField(arrgame);
     neutral.printNeutralObj(arrgame);
-   // base.createUnitsOnField(arrgame);
+    base.createUnitsOnField(arrgame);
     landscape.printLandscape(arrgame);
+    landscape.addGreen(arrgame);
     field.printField(arrgame);
 
-   /* field.doMoveU(arrgame);
     field.doMoveU(arrgame);
     field.doMoveU(arrgame);
-    field.doMoveU(arrgame);*/
+    field.doMoveU(arrgame);
+    field.doMoveU(arrgame);
 
 
 
